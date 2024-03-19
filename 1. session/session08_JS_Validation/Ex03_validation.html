@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <script>
+        function check() {
+            var sName = document.getElementById("txtName").value;
+            var sMail = document.getElementById("txtMail").value;
+            var nPhone = document.getElementById("nPhone").value;
+
+            if(sName.length == 0){
+                alert("Full name isn't blank!!!");
+                document.getElementById("txtName").focus;
+                return false;
+            }
+
+            if(sMail.indexOf("@") < 0 || (sMail.indexOf(".") < 0)){
+                alert("Email is incorrect");
+                document.getElementById("txtMail").focus();
+                return false;
+            }
+
+            if(isNaN(sPhone))
+            {
+                alert("Phone is incorrect");
+                document.getElementById("txtPhone").focus();
+                return false;
+            }
+
+        }   
+    </script>
+</head>
+<body>
+    <form action="https://www.google.com.vn/?hl=vi" onsubmit="return check();">
+        <table width="50%">
+            <tr>
+                <td align="right">Fullname:</td>
+                <td>
+                    <input id="txtName" autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Mail:</td>
+                <td>
+                    <input id="txtMail">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Phone:</td>
+                <td>
+                    <input id="nPhone" type="number">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
+
+<!--
+    - document.[element].focus => chỉ đến phần tử đó
+    - string.lenght => độ dài 1 chuỗi
+    - string.indexOf("[string]") => vị trí đầu tiên mà chuỗi đó xuất hiện. 
+        - trả về -1 nếu không thấy
+     
+-->

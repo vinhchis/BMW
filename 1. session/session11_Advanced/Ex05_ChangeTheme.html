@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Theme</title>
+    <script>
+      function changeTheme(color) {
+        var ID = document.getElementById("box");
+        ID.style.backgroundColor = color;
+      }
+    </script>
+    <style>
+        #box {
+            width: 300px    ;
+            border: 1px solid red;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Change Theme</h1>
+
+    <div id="box">
+      <input type="radio" name="theme" onclick="changeTheme('aqua')"/> Aqua <br>
+      <input type="radio" name="theme" onclick="changeTheme('tan')"/> Tan <br>
+      <input type="radio" name="theme" onclick="changeTheme('lavender')"/> Lavender <br>
+      <input type="radio" name="theme" onclick="changeTheme('white')"/> Default <br>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object | Array</title>
+    <script>
+      /*  
+            var s1 = new Array();
+            var s2 = [];
+        */
+
+      var days = ["Monday", "Tuesday", "Wednesday"];
+      // document.write("<h1>Use join() method</h1>");
+      // document.write(days.join('--'));
+      // document.write("<p>");
+      with (document) {
+        write("<h1>Use join() method</h1>");
+        write(days.join(" ,"));
+        write("<p>");
+
+        days.push("Thusday", "Friday", "Saturday", "Sunday");
+
+        write("<h1>Use normal loop</h1>");
+        for (var i = 0; i < days.length; i++) {
+          write(days[i] + "<br>");
+        }
+
+        write("<h1>Use for each</h1>");
+        for (var i in days) {
+          write(days[i] + "<br>");
+        }
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>

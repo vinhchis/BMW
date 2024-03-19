@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <script>
+        var today = new Date();
+        var day = today.getDay();
+        switch (day) {
+            case 2:
+                document.write("Tuesday");
+                break;
+            default:
+                document.write("Another day");
+                break;
+        }
+    </script>
+</head>
+<body>
+    <select>
+        <script>
+            for(var day=1; day < 31; day++){
+                document.write('<option>' + day + '</option>');
+            }
+        </script>
+    </select> / July / 2023
+
+</body>
+</html>

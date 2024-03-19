@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var fruits = [];
+
+        function addFruit(){
+            var ID = document.getElementById("setFruit");
+            var item = ID.selectedIndex;
+            var fruit = ID.options[item].value;
+            if(fruit.length > 0){
+                fruits.push(fruit);
+                document.getElementById("txtDisplay").value = fruits.length;
+            }
+        }
+
+        function output() {
+            alert(fruits.join('\n'));
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return output()">
+        Fruits:
+        <input type="text" id="txtDisplay" value="0" readonly>
+
+        <select id="setFruit">
+            <option value="Táo">Táo</option>
+            <option value="Lê">Lê</option>
+            <option value="Dưa">Dưa</option>
+            <option value="Xoài">Xoài</option>
+            <option value="Cam">Cam</option>
+        </select>
+
+        <input type="button" value="+" onclick="addFruit()"> <br>
+        <input type="submit" value="output">
+    </form>
+</body>
+</html>

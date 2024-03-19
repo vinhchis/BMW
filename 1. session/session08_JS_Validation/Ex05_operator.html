@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+    <script>
+        var homnay = new Date();
+        var hh = homnay.getHours();
+        var mm = homnay.getMinutes();
+        var sc = homnay.getSeconds();
+        hh = (hh <= 9)? "0"+hh : hh;
+        mm = (mm <= 9)? "0"+mm : mm;
+        sc = (sc <= 9)? "0"+sc : sc;
+        var time = hh + ":" + mm + ":" + sc
+        document.write("<h1>" + time + "</h1>")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

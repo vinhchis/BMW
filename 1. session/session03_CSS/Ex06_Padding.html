@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding</title>
+    <style>
+        div.ex1 {
+            width: 300px;
+            background-color: yellow;
+        }
+
+        div.ex2 {
+            width: 300px;
+            padding: 25px;
+            box-sizing: border-box;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Padding and element width - with box-sizing</h2>
+
+    <div class="ex1">This div is 300px wide.</div>
+    <br>
+
+    <div class="ex2">The width of this div remains at 300px, in spite of the 50px of total left and right padding,
+        because of the box-sizing: border-box property.
+    </div>
+</body>
+
+</html>
+
+<!--
+    Padding
+        + width (duy nhất)
+    Padding Sliders
+    Padding shorthand
+        padding: 12px 40px;
+    Padding & Width
+        + nếu set "box-sizing: border-box" => kích thước box cố dịnh
+            => padding không thay đổi kích thước box
+-->

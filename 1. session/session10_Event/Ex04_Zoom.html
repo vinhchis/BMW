@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zome</title>
+    <script>
+    function changeSize(s){
+        var size = document.getElementById("car").width;
+        document.getElementById("car").width = size*s;
+    }
+
+    function changeButton() {
+        var btnId = document.getElementById('btn');
+        var btn = btnId.value;
+        if(btn == "zoom-in"){
+            btnId.value = "zoom-out";
+            changeSize(1/2);
+        }
+        else{
+            btnId.value = "zoom-in"; 
+            changeSize(2);
+        }
+    }
+
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="zoom-in" onclick="changeButton()">
+    <hr>
+    <img id="car" src="./toyota.png" width="500px" 
+        onmouseover="changeSize(2)"
+        onmouseout="changeSize(1/2)"
+        >
+    <!-- <input id="txtDisplay" value="" type="text" readonly> -->
+</body>
+</html>

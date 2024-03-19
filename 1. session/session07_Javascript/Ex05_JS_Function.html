@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function | JS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        /*
+            [Object name].[method name]
+            built-in functions:
+                1. alert() => chỉ có OK
+                2. comfirm() => OK hoặc Canncel
+                3. prompt() => tạo khung nhập
+                4. parseInt(), parseFloat()
+                5. IsNaN()
+                6. eval()
+                *) mặc định là object name = window
+        */
+
+        // loop
+        // for(let num = 100; num < 500; num += 100){
+        //     document.write('I have ' + num +  ' USD<br>');
+        // } 
+       
+        // 1. alert()
+        // window.alert("Window is default object.");
+
+        // 2. comfirm()
+        // var msg = "Are you sure to update this record ?";
+        // var IsUpdate = confirm(msg);
+        // if(IsUpdate){
+        //     // document.write('<span style="color:blue">Start to update....</span>')
+        //     document.write("<div class='alert alert-warning'>Start to update</div>");
+        // }
+        // else{
+        //     document.write("<div class='alert alert-info'>Noting to do</div>");
+        // }
+
+        // 3.prompt()
+        // var name = prompt("Enter your name:");
+        // var num = prompt("How many would you like to print your name?")
+
+        // for(var i = 0; i< num ; i++){
+        //     document.write(name + "<br>")
+        // }
+
+
+        // 4. parseInt()
+        // var a = "14";
+        // var b = "20";
+        // var sum = parseInt(a) + parseInt(b);
+        // document.write(sum);
+
+        // 5. IsNaN()
+        // do {
+        //     var number = prompt("Enter your number:");
+        // } while (isNaN(number));
+        
+        // 6. eval()
+        var n = "10 + 5 - 2";
+        document.write("10 + 5 - 2 = " + eval(n));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

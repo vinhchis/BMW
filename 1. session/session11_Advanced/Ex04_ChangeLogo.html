@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayLogo() {
+            var ID = document.getElementById("brand");
+            var i = ID.selectedIndex;
+            var phone = ID.options[i].value;
+            document.getElementById("logo").src = "./img/" + phone + ".png";
+        }
+    </script>
+</head>
+<body>
+        <select id="brand" onclick="displayLogo()">
+            <option value="samsung" selected>Samsung</option>
+            <option value="oppo">Oppo</option>
+            <option value="xiaomi">Xiaomi</option>
+            <option value="vivo">Vivo</option>
+        </select>
+
+        <img id="logo" src="./img/samsung.png" alt="">
+</body>
+</html>

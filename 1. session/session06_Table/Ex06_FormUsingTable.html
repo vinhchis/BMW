@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 | Form Using Table </title>
+</head>
+
+<body>
+    <form action="https://www.wikipedia.org/">
+        <table align="center" width="50%">
+            <caption>
+                <h1>Member Register Form</h1>
+            </caption>
+            <tr>
+                <td align="right"> FullName:</td>
+                <td><input placeholder="Enter full name" autofocus></td>
+            </tr>
+            <tr>
+                <td align="right">Email:</td>
+                <td><input type="email" required></td>
+            </tr>
+            <tr>
+                <td align="right">Avatar:</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td align="right">Password:</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td align="right">Comfirmed Password:</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td align="right">TelePhone:</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td align="right">Gender:</td>
+                <td>
+                    <input type="radio" name="gender" checked> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Hobbies:</td>
+                <td>
+                    <input type="checkbox" checked> Music
+                    <input type="checkbox"> Reading
+                    <input type="checkbox"> Swimming
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Country:</td>
+                <td>
+                    <select>
+                        <option value="none" selected>Choose Your Country</option>
+                        <option value="vietname">VietNam</option>
+                        <option value="thailan">ThaiLan</option>
+                        <option value="campodia">Campodia</option>
+                        <option value="myanmar">Myanmar</option>
+                        <option value="laos">Laos</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Comments:</td>
+                <td>
+                    <textarea name="" id="" cols="40" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"></td>
+                <td>
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Clear">
+                    <input type="button" value="Help">
+                </td>
+            </tr>
+
+        </table>
+
+
+    </form>
+
+
+
+</body>
+
+</html>
+<!--
+    1. Layout => container : Form element
+        ex: <form> ... </form>
+    2. Categories:
+        2.1. Basic
+            2.1.1. Input element
+            2.1.2. TextArea, Select
+            2.1.3. Button
+        2.2. HTML5
+            2.2.1. new Atributes:
+                + placeholder
+                + required
+            2.2.2. new types:
+                + email
+                + number
+        2.3. Advanced
+
+        Control elements
+-->

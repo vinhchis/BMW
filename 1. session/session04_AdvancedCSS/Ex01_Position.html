@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        div {
+            background-color: #00F;
+            color: #fff;
+            width: 150px;
+            padding: 20px 10px;
+        }
+
+        #div1 {
+            position: absolute;
+            top: 250px;
+            left: 100px;
+        }
+
+        #div2 {
+            position: absolute;
+            top: 300px;
+            background-color: #0F0;
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+    <div>Tp Hồ Chí Minh</div>
+    <br>
+    <div>Đà Nẵng</div>
+    <br>
+    <div>Hà Nội</div>
+    <div id="div1">
+        <h3>Đà Lạt</h3>
+    </div>
+    <div id="div2">
+        <h3>Phan thiết</h3>
+    </div>
+</body>
+</html>

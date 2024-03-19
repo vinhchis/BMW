@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="./data.js">
+
+    </script>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-bordered table-hover">
+            <caption><h1>Car list</h1></caption>
+            <tr>
+                <th>No</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th colspan="2">Function</th>
+            </tr>
+            <script>
+                with(document){
+                    
+                    for(var i=0;i< cars.length;i++){
+                        write("<tr>");
+                           write("<td>" +(i + 1) +"</td>");
+                           write("<td>" + cars[i].brand +"</td>");
+                           write("<td>" + cars[i].model +"</td>");
+                           write("<td>" + cars[i].price +"</td>");
+                           write("<td><img src='" + cars[i].img + "'></td>");
+                           write("<td><a href='#'>Edit</a></td>");
+                           write("<td><a href='#'>Delete</a></td>");
+                        write("</tr>");
+                    }
+
+                }
+            </script>
+            
+        </table>
+        // 
+
+    </div>
+</body>
+</html>

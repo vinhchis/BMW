@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        function check() {
+            var sFName = document.getElementById("txtFName").value;
+            var sLName = document.getElementById("txtLName").value;
+
+            var sMail = document.getElementById("txtEmail").value;
+            var nPhone = document.getElementById("txtPhone").value;
+            var sReview = document.getElementById("aReview").value;
+
+
+            var reName = /^\w+$/;
+            if (!reName.test(sFName)) {
+                alert("First Name can not left empty!");
+                document.getElementById("txtFName").focus;
+                return false;
+            }
+
+            if (!reName.test(sLName)) {
+                alert("Last name can not left empty!");
+                document.getElementById("txtLName").focus;
+                return false;
+            }
+
+            var reMail = /^\w{4}[@]\w{3}[.]\w{3}([.]\w{2})?$/;
+            if (!reMail.test(sMail)) {
+                alert("Email is incorrect");
+                document.getElementById("txtEmail").focus();
+                return false;
+            }
+
+            var rePhone = /^\d{10,11}$/;
+            if (!rePhone.test(nPhone)) {
+                alert("Phone is incorrect");
+                document.getElementById("txtPhone").focus();
+                return false;
+            }
+
+            var reReview = /^\w+$/;
+            if (!reReview.test(sReview)) {
+                alert("The *Tell Us about Project* can not left empty!");
+                document.getElementById("aReview").focus;
+                return false;
+            }
+
+
+            var mes = [];
+            mes.push('Congratulation!');
+            mes.push('Your contact information has been sent successfully!');
+            alert(mes.join('\n'))
+        }
+    </script>
+    <title>Contact</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="./images/logo.png" alt="">
+        </div>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Overview</a>
+            <a href="#">Pricing</a>
+            <a href="#">Team</a>
+            <a href="./contact.html">Contact</a>
+
+        </nav>
+    </header>
+    <section>
+        <form action="./index.html" onsubmit="return check()">
+            <table>
+                <caption>CONTACT US</caption>
+                <tr>
+                    <td>
+                        <input class="full-width" type="text" name="txtFName" id="txtFName" placeholder="First Name*"
+                            autofocus>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="full-width" type="text" name="txtLName" id="txtLName" placeholder="Last Name*"
+                            autofocus>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="full-width" name="txtEmail" id="txtEmail" placeholder="Email*"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="full-width" name="txtPhone" id="txtPhone" placeholder="Phone*"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea class="full-width" name="aReview" id="aReview" rows="5"
+                            placeholder="Tell Us About Project"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="rType" id="rCompany" value="Company"> Company
+                        <input type="radio" name="rType" id="rPersonal" value="Personal" checked> Personal
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <input type="submit" value="Sent Message">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+
+    </section>
+    <footer>
+        &copy; Copyright 2021. All Rights Reserved by SOFTING
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formating Text</title>
+</head>
+<body>
+    <!--
+        1. Physical & Logical Elements
+            + Physical Elements(vật lý) - hình thức xuất hiện
+            + Logical Elements(luận lý) - nội dung mô tả bằng 1 hình thức(thẻ vật lý)
+            So sánh:
+                1.1.  bold (in đậm) -> <b> | <strong>  
+                1.2. italic (in nghiêng) -> <i> | emphasize <em>  
+                1.3. underline (gạch chân) -> <u> | insert <ins>
+                1.4. strike (gạch thân)  -> <strike> | delete <del>
+                
+        2. Level
+            2.1. Text Level (inline)
+                    - 1.1 -> 1.4
+                    - <span>
+            2.2. BLock Level (block)
+                    - <p>: paragraph
+                    - <h_>: heading
+    -->
+    <b>Bold - In đậm - Physical</b>
+    <br>
+    <strong>Strong - In đậm - Logical</strong>
+    <hr width="50%" align="left">
+
+    <i>Italic - In nghiêng - Physical</i>
+    <br>
+    <em>Emphasize - In nghiêng - Logical</em>
+    <hr width="50%" align="left">
+
+    <u>Underline - gạch chân - Physical</u>
+    <br>
+    <ins>Insert - điền vào chổ trống - Logical</ins>
+    <hr width="50%" align="left">
+
+    <strike>Strike - gạch chân - Physical</strike>
+    <br>
+    <del>Dell Alien - giá cũ : 10000$ - Logical</del> Giá mới : 7000$ 
+    <hr width="50%" align="left">
+
+    <pre>
+        Anh
+            Yêu
+                Em
+    </pre>
+
+    <!--
+        Sự khác biệt br và p
+            - sau <p> là tự động xuống dòng
+            - Mặc định 1 đoạn trong html tương tự 1 thẻ <p>
+                * 2 dòng liên tiếp thì nó tính là 1 dòng mà thôi
+            - p = <br> + text
+            cuộn dòng mềm
+            cuộn dòng cứng
+    -->
+    aaaaaaaaaaaaaaaa<br>llalalalalalaal
+    aaaaaaaaaaaaaaaa
+    bbbbbbbb
+    <p>
+        aaaaaaaaaaaaaaaa 
+        llalalalalalaal
+    </p>
+    <p>
+        haha
+    </p>
+    <!-- 
+    aaaaaaaaaaaaaaaa
+    llalalalalalaal aaaaaaaaaaaaaaaa bbbbbbbb
+    
+    aaaaaaaaaaaaaaaa llalalalalalaal
+    
+    haha  
+    -->
+
+
+</body>
+</html>

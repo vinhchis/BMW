@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <script>
+        function check() {
+            var sName = document.getElementById("txtName").value;
+            var sMail = document.getElementById("txtMail").value;
+            var nPhone = document.getElementById("nPhone").value;
+
+            var reName = /^\w+$/;
+            if (!reName.test(sName)) {
+                alert("Full name can't left blank!!!");
+                document.getElementById("txtName").focus;
+                return false;
+            }
+
+            var reMail = /^\w+[@]\w+[.]\w{3}([.]\w{2})?$/;
+            if (!reMail.test(sMail)) {
+                alert("Email is incorrect!");
+                document.getElementById("txtMail").focus();
+                return false;
+            }
+            
+            var rePhone = /^\d{8,12}$/;
+            if (!rePhone.test(sPhone)) {
+                alert("Phone is incorrect!");
+                document.getElementById("txtPhone").focus();
+                return false;
+            }
+
+        }   
+    </script>
+
+</head>
+
+<body>
+    <form action="https://www.google.com.vn/?hl=vi" onsubmit="return check();">
+        <table width="50%">
+            <tr>
+                <td align="right">Fullname:</td>
+                <td>
+                    <input id="txtName" autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Mail:</td>
+                <td>
+                    <input id="txtMail">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Phone:</td>
+                <td>
+                    <input id="nPhone" type="number">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
+<!--
+    Regular Expression : biểu thức lệ quy
+    - dùng để kiểm tra mẫu như: email, số điện thoại
+
+    Kí hiệu:
+            ^   : bắt đầu kiểm tra
+            $   : kết thúc kiểm tra
+            []  : hằng  
+            +   : loop from 1 to m
+            *   : loop from 0 to m
+            \w  : [a-zA-z] - Alphanumeric
+            \d  : [0-9] - Digit
+            \s  : whitespace
+            {m,n} : m => n
+            ()      : gom lại
+            () ?    : option
+-->

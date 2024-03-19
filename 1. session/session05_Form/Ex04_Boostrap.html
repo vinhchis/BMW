@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Register Form</h2>
+
+        <form class="form-" action="http://vnexpress.net">
+            
+            <div class="form-group">
+                <label class="control-label col-lg-3">FullName<span>*</span>:</label>
+                <div class="col-lg-7">
+                     <input class="form-control" placeholder="Enter full name" autofocus tabindex="1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="control-label col-lg-3">Email:</label>
+                <div class="col-lg-7">
+                    <input class="form-control" type="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="control-label col-lg-3">Avatar:</label>
+                <div class="col-lg-7">
+                    <input type="file">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="control-label col-lg-3">Password:</label>
+                <div class="col-lg-2">
+                    <input class="form-control" type="password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="control-label col-lg-3">Comfirmed Password:</label>
+                <div class="col-lg-2">
+                    <input class="form-control" type="password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="control-label col-lg-3">TelePhone:</label>
+                <div class="col-lg-3">
+                    <input class="form-control" type="number">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="control-label col-lg-3">Gender:</label>
+                <div class="col-lg-7">
+                    <input class="radio-inline" type="radio" name="gender" checked> Male
+                    <input class="radio-inline" type="radio" name="gender"> Female
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="control-label col-lg-3">Hobbies:</label>
+                <div class="col-lg-7">
+                    <input type="checkbox" checked> Music
+                    <input type="checkbox"> Reading
+                    <input type="checkbox"> Swimming
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="control-label col-lg-3">Country:</label>
+                <div class="col-lg-7">
+                    <select>
+                        <option value="none" selected>Choose Your Country</option>
+                        <option value="vietname">VietNam</option>
+                        <option value="thailan">ThaiLan</option>
+                        <option value="campodia">Campodia</option>
+                        <option value="myanmar">Myanmar</option>
+                        <option value="laos">Laos</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="control-label col-lg-3">Comments:</label>
+                <div class="col-lg-7">
+                    <textarea cols="40" rows="5" tabindex="2" accesskey="c"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="control-label col-lg-3">Capcha:</label>
+                <div class="col-lg-7">
+                    <input style="width: 60px;" value="12AKKAC" readonly> 
+                    <input style="width: 100px;" placeholder="Enter capcha">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <!-- <label for="" class="control-label col-lg-3">Register</label> -->
+                <div class="col-lg-offset-3 col-lg-7">
+                    <button class="btn btn-default">Register</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-offset-3 col-lg-7">
+                    <input class="btn btn-default" type="reset" value="Clear">
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <div class="col-lg-offset-3 col-lg-7">
+                    <input class="btn btn-default" type="button" value="Help">
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</body>
+</html>
+<!--
+    có 3 kiểu form
+        - form-horizontal => kiểu ngang (1 cặp label - input)
+        - form- => kiểu cột
+        - inline-form => kiểu 1 hàng ngang (cả label và input)
+    - form-group : 1 field
+    - control-label => căn phải cho label
+    - form-control => full khoảng cho input
+    - btn
+    *) offset-3 => margin-left
+
+-->

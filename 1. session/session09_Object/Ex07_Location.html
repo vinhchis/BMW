@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object | Location</title>
+    <script>
+        function navigatePage() {
+            location.href = "https://www.google.com.vn";
+        }
+
+        function navigatePageWithLink()
+        {
+            var link = document.getElementById("link").value;
+            location.href = link;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <input type="button" value="Search" onclick="navigatePage()"> -->
+
+    <input id="link" type="text">
+    <input  type="button" value="Search" onclick="navigatePageWithLink()">  
+
+      
+</body>
+</html>

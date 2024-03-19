@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#logo {
+    font-size: 5em;
+    color: white;
+    text-shadow: 4px 4px #ffbb00;
+}
+
+nav {
+    background-color: #ffbb00;
+}
+
+#myNav {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#myNav li {
+    float: left;
+}
+
+#myNav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+}
+
+#banner {
+    width: 100%
+}
+
+footer {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* Register */
+
+table {
+    width: 100%;
+    margin: 30px;
+    padding: 20px;
+    font-size: 2em;;
+}
+
+table caption {
+    font-size: 2em;;
+}
+
+
+th, td {
+    display: block;
+    text-align: left;
+}
+
+.full-strech {
+    width: 70%;
+}

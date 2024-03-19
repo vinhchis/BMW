@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .row > col-2:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row-2 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .photo p {
+            text-align: center;
+        }
+        
+    </style>
+    <title>Test</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-2">
+            <div class="row-2">
+                <div class="photo">
+                    <img src="./images/bok-choi.jpg" alt="">
+                    <br>
+                    <p>bok-choi</p>
+                </div>
+                <div class="desc">
+                    <img src="./images/pic1.PNG" alt="">
+                </div>
+            </div>
+
+            <div class="row-2">
+                <div class="photo">
+                    <img src="./images/bok-choi.jpg" alt="">
+                    <br>
+                    <p>bok-choi</p>
+                </div>
+                <div class="desc">
+                    <img src="./images/pic1.PNG" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <img src="./images/pic3.PNG" alt="">
+        </div>
+                
+    </div>
+</body>
+</html>

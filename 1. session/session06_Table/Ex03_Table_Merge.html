@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Merge Cell</title>
+</head>
+<body>
+    
+    <table width="100%" border="1">
+        <caption>Lịch thi</caption>
+        <tr>
+            <th rowspan="2">Ca</th>
+            <th colspan="2">Thứ hai</th>
+            <th colspan="2">Thứ ba</th>
+            <th colspan="2">Thứ tư</th>
+        </tr>
+        <tr>
+            <th>LT</th>
+            <th>TH</th>
+            <th>LT</th>
+            <th>TH</th>
+            <th>LT</th>
+            <th>TH</th>
+        </tr>
+        <tr>
+            <th>Sáng</th>
+            <td>6:00</td>
+            <td>8:00</td>
+            <td>8:00</td>
+            <td>6:00</td>
+            <td>8:00</td>
+            <td>8:00</td>
+        </tr>
+        <tr>
+            <th>Chiều</th>
+            <td>8:00</td>
+            <td>6:00</td>
+            <td>8:00</td>
+            <td>6:00</td>
+            <td>8:00</td>
+            <td>6:00</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
+<!--
+    - rowspan : gộp hàng
+    - colspan : gộp hàng
+
+    - Khi gộp hàng hay cột cần phải xoá đi các cột rỗng dư thừa để table không bị lồi ra ngoài.
+    * thẻ caption có thể bị thay đổi bởi boostrap
+-->

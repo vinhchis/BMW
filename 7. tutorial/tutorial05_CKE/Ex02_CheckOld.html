@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function kiemtra(){
+        
+            //Date
+            //1. Kiểm tra trống
+            var sBirth = document.getElementById("txtBirth").value;
+            if(!sBirth){
+                alert("Birthdate is invalid!");
+                return false;
+            }
+            //2. Tính tuổi
+            //2.1 Tạo Regex reDate -> 4 ký số
+            var reBirth = /\d{4}/;
+            //2.2. Dùng exec() đọc từ sDate theo reDate gán cho yy
+            var yy = reBirth.exec(sBirth);
+            //2.3. Đọc ngày tháng hiện tại gán cho currentYear
+            var currentYear = new Date().getFullYear();
+            //2.4. var age = currentYear - yy;
+            var age = currentYear - yy;
+            //2.5. Nếu dưới 18 tuổi báo invalid
+            if(age < 18){
+                alert("See you next time!");
+                return false;
+            }
+        
+            //Tạo thông báo 
+            var message = [];
+            message.push("Congratulation!");
+            message.push("----------------");
+            message.push("Year Old: " + age);
+            alert(message.join("\n"));
+
+       }
+    </script>
+</head>
+<body>
+    <form onsubmit="return kiemtra()">
+        Birthdate: <input id="txtBirth" type="date"><br>
+        <hr width="50%" align="left">
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

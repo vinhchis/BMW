@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 500px;
+}
+
+#logo {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: azure;
+}
+
+nav > a {
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  /* items the same size */
+  flex: 1 1 0px;
+}
+
+nav > a:hover {
+  background-color: aqua;
+  color: azure;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-2 {
+  /* flex-basis: 50%; */
+  flex: 1 1 0px;
+  padding: 30px;
+}
+
+.col-2 p {
+  font-size: 3em;
+}
+
+.col-2 img {
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  /* position make width shrinks */
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+/* Contact Start  */
+

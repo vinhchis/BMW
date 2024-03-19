@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Message</title>
+    <script>
+      function check() {
+        var sName = document.getElementById("txtName").value;
+        var sMail = document.getElementById("txtMail").value;
+        var nPhone = document.getElementById("nPhone").value;
+
+        var reName = /^\w+$/;
+        if (!reName.test(sName)) {
+          alert("Full name can't left blank!!!");
+          document.getElementById("txtName").focus;
+          return false;
+        }
+
+        var reMail = /^\w+[@]\w+[.]\w{3}([.]\w{2})?$/;
+        if (!reMail.test(sMail)) {
+          alert("Email is incorrect!");
+          document.getElementById("txtMail").focus();
+          return false;
+        }
+
+        var rePhone = /^\d{8,12}$/;
+        if (!rePhone.test(nPhone)) {
+          alert("Phone is incorrect!");
+          document.getElementById("txtPhone").focus();
+          return false;
+        }
+
+        var sGender;
+        var genders = document.getElementsByName("rdGender");
+        for(var g of genders){
+          if(g.checked){
+            sGender = g.value;
+            alert(sGender);
+          }
+        }
+
+
+        // var sGender = ID.checked ? "Male" : "Female";
+
+        ////////////////// Message //////////////////
+
+        // var mes = "Welcome to my homepage"
+
+        var mes = [];
+        mes.push("Your Information:");
+        mes.push("--------------");
+        mes.push("Full name: " + sName);
+        mes.push("Email: " + sMail);
+        mes.push("Phone: " + nPhone);
+        mes.push("Gender: " + sGender);
+        
+        alert(mes.join("\n"));
+      }
+    </script>
+  </head>
+
+  <body>
+    <form name="register" action="https://vnexpress.net/?mail=&pwd=&rpwd=&phone=&gender=on" onsubmit="check()">
+      <table width="50%">
+        <tr>
+          <td align="right">Fullname:</td>
+          <td>
+            <input id="txtName" autofocus />
+          </td>
+        </tr>
+        <tr>
+          <td align="right">Mail:</td>
+          <td>
+            <input id="txtMail" />
+          </td>
+        </tr>
+        <tr>
+          <td align="right">Phone:</td>
+          <td>
+            <input id="nPhone" />
+          </td>
+        </tr>
+        <tr>
+            <td align="right">Gender:</td>
+            <td>
+              <input type="radio" id="rdGender" name="rdGender" value="male" checked> Male
+              <input type="radio" id="rdGender" name="rdGender" value="female"> FeMale
+
+            </td>
+          </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Register" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

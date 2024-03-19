@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function check() {
+            var sFName = document.getElementById("txtFName").value;
+            var sLName = document.getElementById("txtLName").value;
+
+            var sMail = document.getElementById("txtEmail").value;
+            var nPhone = document.getElementById("txtPhone").value;
+
+            var reName = /^\w+$/;
+            if(!reName.test(sFName)){
+                alert("First name isn't blank!!!");
+                document.getElementById("txtFName").focus;
+                return false;
+            }
+
+            if(!reName.test(sLName)){
+                alert("Last name isn't blank!!!");
+                document.getElementById("txtLName").focus;
+                return false;
+            }
+
+            var reMail = /^\w+[@]\w+[.]\w{3}([.]\w{2})?$/;
+            if(!reMail.test(sMail)){
+                alert("Email is incorrect");
+                document.getElementById("txtEmail").focus();
+                return false;
+            }
+
+            var rePhone = /^\d{8,12}$/;
+            if(!rePhone.test(nPhone))
+            {
+                alert("Phone is incorrect");
+                document.getElementById("txtPhone").focus();
+                return false;
+            }
+
+            var ID = document.getElementById("sCountry");
+            var i = ID.selectedIndex;
+            var sCountry = ID.options[i].value;
+
+            var sGender;
+            var genders = document.getElementsByName("rGender");
+            for(var g of genders){
+                if(g.checked){
+                    sGender = g.value;
+                }
+            }
+
+            var mes = [];
+
+            mes.push("This page says\nRegister Information");
+            mes.push("++++++++++++++++++++++++++++++++");
+            mes.push('First Name: ' + sFName);
+            mes.push('Last Name: ' + sLName);
+            mes.push('Gender: ' + sGender);
+            mes.push('Mail: ' + sMail);
+            mes.push('Phone: ' + nPhone);
+            mes.push('Country: ' + sCountry);
+
+            alert(mes.join('\n'));
+
+        }
+    </script>
+    <title>Register</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            Logo
+        </div>
+
+        <div id="navbar">
+            <div><a href="./Index.html">Home</a></div>
+            <div><a href="#">Share</a></div>
+            <div><a href="./Register.html">Register</a></div>
+            <div><a href="#">Login</a></div>
+            <div><a href="#">About Us</a></div>
+        </div>
+        
+    </header>
+    <section>
+        <div id="reg-form">
+            <h2>Register Form</h2>
+            <form action="./Index.html" onsubmit="return check()">
+                <table>
+                    <tr>
+                        <td align="left">
+                            <label for="txtFName">Full Name: <span style="color:red">*</span></label>
+                        </td>
+                        <td>
+                            <input id="txtFName" placeholder="Enter Full name..." autofocus>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <label for="txtLName">Last Name: <span style="color:red">*</span></label>
+                        </td>
+                        <td>
+                            <input id="txtLName" placeholder="Enter Last name...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <label for="sContry">Country: </label>
+                        </td>
+                        <td>
+                            <select name="sContry" id="sCountry">
+                                <option value="Vietnam" checked>Vietnam</option>
+                                <option value="Laos">Laos</option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Thailand">ThaiLand</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <label for="rGender">Gender:</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="rGender" id="rGender" value="Male" checked> Male
+                            <input type="radio" name="rGender" id="rGender" value="Female"> Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <label for="txtEmail">Email: <span style="color:red">*</span></label>
+                        </td>
+                        <td>
+                            <input id="txtEmail" placeholder="Enter Email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <label for="txtPhone">Phone: <span style="color:red">*</span></label>
+                        </td>
+                        <td>
+                            <input id="txtPhone" type="number" placeholder="Enter Phone">
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+
+                <!-- <input type="submit" value="Register">
+                <input type="reset" value="Reset"> -->
+            </form>
+        </div>
+    </section>
+    <footer>
+        &copy 2020 By Me. AllRights reserved | Desgin by [Lê Vinh Chí]
+    </footer>
+</body>
+</html>

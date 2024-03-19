@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Valid</title>
+    <style>
+        #txtName:invalid{
+            border: 2px solid red;
+        }
+
+        
+        #txtName:valid {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        Full name: <input type="text" id="txtName" required autofocus><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

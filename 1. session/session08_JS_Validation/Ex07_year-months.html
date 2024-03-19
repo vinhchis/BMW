@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year + Months</title>
+</head>
+
+<body>
+    Day<select>
+        <script>
+            const list = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var Year = new Date().getFullYear();
+            var Months = new Date().getMonth();
+            function leapyear() {
+                return new Date(Year, 2, 0).getDate() > 28;
+            }
+
+            function getDaysOfMonth(Year, Months) {
+                return new Date(Year, Months + 1, 0).getDate();
+            }
+            if (!leapyear) {
+                document.write("Năm nhuận");
+                for (var day = 1; day <= getDaysOfMonth(Year, Months); day++) {
+                    document.write("<option>" + day + "</option>")
+                }
+            }
+            else {
+                document.write("Năm thường");
+                for (var day = 1; day <= getDaysOfMonth(Year, Months); day++) {
+                    document.write("<option>" + day + "</option>")
+                }
+            }
+        </script>
+
+    </select> /
+    <script>
+        document.write(list[Months]);
+    </script> /
+    <script>
+        document.write(Year);
+    </script>
+</body >
+
+</html >

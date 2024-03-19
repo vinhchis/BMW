@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function check() {
+            var sName = document.getElementById("txtName").value;
+            var sPassword = document.getElementById("txtPassword").value;
+            
+            if(sName == "aptech" && sPassword == "123"){
+                alert("Welcome Aptech, login successfully.")
+            }else{
+                alert("Your Name and Password isn't valid!!");
+                document.getElementById("txtName").focus;
+                return false;
+            }
+        }
+    </script>
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            Logo
+        </div>
+
+        <div id="navbar">
+            <div><a href="./Index.html">Home</a></div>
+            <div><a href="#">Share</a></div>
+            <div><a href="./Register.html">Register</a></div>
+            <div><a href="#">Login</a></div>
+            <div><a href="#">About Us</a></div>
+        </div>
+    </header>
+    <section>
+        <div class="side side-left">
+            <img src="./images/bgIndex.jpg" alt="">
+        </div>
+        <div class="side side-right">
+            <h2>SignIn Form</h2>
+            <form action="./Register.html" onsubmit="check()">
+                <table>
+                    <tr>
+                        <td align="right">
+                            <label for="txtName">Login Name:</label>
+                        </td>
+                        <td>
+                            <input id="txtName" autofocus>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <label for="txtPassword">Password:</label>
+                        </td>
+                        <td>
+                            <input id="txtPassword">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p>Already have accounts ? <a href="./Register.html">SignUp</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <input type="submit" value="SignIn">
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </section>
+    <footer>
+        &copy 2020 By Me. AllRights reserved | Desgin by [Lê Vinh Chí]
+    </footer>
+</body>
+</html>

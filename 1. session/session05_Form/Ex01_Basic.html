@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic | Form</title>
+</head>
+<body>
+    <h1>Member Register Form</h1>
+    <form action="https://www.wikipedia.org/">
+        <!-- 2.1.1 Input element-->
+        FullName: <input value="Le Van A"> <br> <!-- Default: <TextField type="text"> -->
+        Email: <input><br>
+        Avatar: <input type="file"><br>
+        Password: <input type="password"><br>
+        Comfirmed Password: <input type="password"><br>
+        TelePhone: <input><br>
+        Gender: <input type="radio" name="gender" checked> Male
+                <input type="radio" name="gender"> Female
+            <br>
+        Hobbies: 
+            <input type="checkbox" checked> Music
+            <input type="checkbox"> Reading
+            <input type="checkbox"> Swimming
+                 <br>
+
+        <!-- 2.1.2. Area, Select-->
+        Country: 
+            <select>
+                <option value="none" selected>Choose Your Country</option>
+                <option value="vietname">VietNam</option>
+                <option value="thailan">ThaiLan</option>
+                <option value="campodia">Campodia</option>
+                <option value="myanmar">Myanmar</option>
+                <option value="laos">Laos</option>
+            </select>
+
+        <br>
+        Comments: <textarea name="" id="" cols="40" rows="5"></textarea> 
+        <br>
+
+        <!-- 2.1.3. Button-->
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+        <input type="button" value="Help">
+    </form>
+
+
+
+</body>
+</html>
+<!--
+    1. Layout => container : Form element
+        ex: <form> ... </form>
+    2. Categories:
+        2.1. Basic (x)
+            2.1.1. Input element (type= text/number/radio/checkbox/...)
+            2.1.2. TextArea, Select-Options
+            2.1.3. Button
+        2.2. HTML5
+        2.3. Advanced
+
+        Control elements
+-->

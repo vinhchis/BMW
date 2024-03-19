@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+    <style>
+        div {
+            margin: 70px;
+            border: 1px solid #4CAF50;
+        }
+
+        .center {
+            margin: auto;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS Margins</h2>
+
+    <div>This element has a margin of 70px.</div>
+    <p>
+        The end.
+    </p>
+
+    <h3>Auto Value</h3>
+    <div class="center">
+        This div will be horizontally centered because it has margin: auto;
+    </div>
+
+    <div >
+        <div class="center">
+            This div will be horizontally centered because it has margin: auto;
+        </div>
+
+        <div class="center">
+            This div will be horizontally centered because it has margin: auto;
+        </div>
+    </div>
+</body>
+
+</html>
+<!--
+    - Margin:
+        + width (duy nhất)
+        - * Auto Value => Căn giữa so với phần tử cha
+
+    - Magin Sliders
+
+    - Margin Shorthand
+        margin: 12px 23px 56px;
+    - Margin Collapse:
+        + Top margin và bottom Margin của 2 phần tử đụng độ nhau
+            => chọn lớn hơn
+        + left và right margin không sảy ra 
+        
+-->

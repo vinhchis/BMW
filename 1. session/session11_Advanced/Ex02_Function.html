@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <script>
+        function ham1(){
+            alert('This is first style');
+        }
+
+        const ham2 = () => {
+            alert('This is second style');
+        }
+
+        const ham3 = (n) => {
+            alert('This is ' + n + ' styles');
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Style 1" onclick="ham1()">
+    <input type="button" value="Style 2" onclick="ham2()">
+    <input type="button" value="Style 3" onclick="ham3(12)">
+
+</body>
+</html>
